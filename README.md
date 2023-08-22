@@ -2,6 +2,25 @@
 
 Refer to the [documentation](https://lazyvim.github.io/installation) for more information.
 
+## Using python virtual environment
+
+Start Vimr from an activated terminal
+
+```
+source venv/bin/activate
+vimr --cur-env --cwd .
+```
+
+## Format unsaved buffer
+
+Set filetype
+
+```
+:set ft=json
+```
+
+`<leader>cf` Format document
+
 ## Keymaps
 
 ### Editing
@@ -37,6 +56,10 @@ Telescope shortcuts
 `<leader>-` Split window below
 
 `:%bd` Close all buffers
+
+### Spelling
+
+`z=` Spelling suggestions (under cursor)
 
 ## Todo
 
