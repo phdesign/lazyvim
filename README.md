@@ -47,6 +47,8 @@ Telescope shortcuts
 
 `<leader>sR` Resume last Telescope session
 
+`<c-q>` Show Telescope results in quickfix
+
 ### Windows and buffers
 
 `<c-/>` Show terminal (root dir)
@@ -56,6 +58,8 @@ Telescope shortcuts
 `<leader>-` Split window below
 
 `:%bd` Close all buffers
+
+`<leader>,` List buffers
 
 ### Spelling
 

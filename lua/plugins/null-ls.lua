@@ -1,12 +1,8 @@
 return {
   "jose-elias-alvarez/null-ls.nvim",
-  opts = function()
+  opts = function(_, opts)
     local nls = require("null-ls")
-    return {
-      sources = {
-        nls.builtins.diagnostics.flake8,
-        nls.builtins.formatting.black,
-      },
-    }
+    table.insert(opts.sources, nls.builtins.diagnostics.flake8)
+    table.insert(opts.sources, nls.builtins.formatting.black)
   end,
 }
