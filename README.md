@@ -49,6 +49,11 @@ Telescope shortcuts
 
 `<c-q>` Show Telescope results in quickfix
 
+### Surround
+
+`gzr` Replace surround
+`gzrtt` Replace surrounding tag
+
 ### Windows and buffers
 
 `<c-/>` Show terminal (root dir)
