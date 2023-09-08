@@ -11,7 +11,9 @@ source venv/bin/activate
 vimr --cur-env --cwd .
 ```
 
-## Setup nerd fonts in ChromeOS (crostini)
+## ChromeOS setup
+
+### Setup nerd fonts in ChromeOS (crostini)
 
 Press `Ctrl + Shift + j` to open devtools console in crostini terminal.
 
@@ -20,6 +22,39 @@ Paste this into the console:
 ```
 term_.prefs_.set('user-css-text', '@font-face {font-family: "Fira Code Nerd Font"; src: url("https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Light/FiraCodeNerdFont-Light.ttf"); font-weight: normal; font-style: normal;} x-row {text-rendering: optimizeLegibility;font-variant-ligatures: normal;}')
 term_.prefs_.set('font-family', '"Fira Code Nerd Font", monospace');
+```
+
+### Setup system clipboard in ChromeOS
+
+```
+sudo apt install wl-clipboard
+```
+
+### Install Node.js
+
+Install Node.js from NodeSource https://github.com/nodesource/distributions
+
+1. Download and import the Nodesource GPG key
+
+```
+sudo apt-get update
+sudo apt-get install -y ca-certificates curl gnupg
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+```
+
+2. Create deb repository
+
+```
+NODE_MAJOR=18
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+```
+
+3. Run Update and Install
+
+```
+sudo apt-get update
+sudo apt-get install nodejs -y
 ```
 
 ## Format unsaved buffer
