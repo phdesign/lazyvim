@@ -11,6 +11,17 @@ source venv/bin/activate
 vimr --cur-env --cwd .
 ```
 
+## Setup nerd fonts in ChromeOS (crostini)
+
+Press `Ctrl + Shift + j` to open devtools console in crostini terminal.
+
+Paste this into the console: 
+
+```
+term_.prefs_.set('user-css-text', '@font-face {font-family: "Fira Code Nerd Font"; src: url("https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Light/FiraCodeNerdFont-Light.ttf"); font-weight: normal; font-style: normal;} x-row {text-rendering: optimizeLegibility;font-variant-ligatures: normal;}')
+term_.prefs_.set('font-family', '"Fira Code Nerd Font", monospace');
+```
+
 ## Format unsaved buffer
 
 Set filetype
