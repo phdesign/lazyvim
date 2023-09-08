@@ -17,3 +17,12 @@ vim.keymap.set(
   '"=system(\'python3 -c "import uuid; print(uuid.uuid4(), end=\\"\\");"\')<CR>p',
   { desc = "Insert new GUID" }
 )
+
+vim.cmd("command -range=% DeleteBlanks <line1>,<line2>g/^\\s*$/d")
+vim.cmd("command -range=% DeleteDuplicateLines <line1>,<line2>sort|<line1>,<line2>g/^\\(.*\\)\\n\\1$/d")
+-- vim.api.nvim_create_user_command("DeleteBlanks", "<line1>,<line2>g/^\\s*$/d", { range = "%" })
+-- vim.api.nvim_create_user_command(
+--   "DeleteDuplicateLines",
+--   "<line1>,<line2>sort|<line1>,<line2>g/^\\(.*\\)\\n\\1$/d",
+--   { range = "%" }
+-- )
