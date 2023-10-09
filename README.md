@@ -17,7 +17,7 @@ vimr --cur-env --cwd .
 
 Press `Ctrl + Shift + j` to open devtools console in crostini terminal.
 
-Paste this into the console: 
+Paste this into the console:
 
 ```
 term_.prefs_.set('user-css-text', '@font-face {font-family: "Fira Code Nerd Font"; src: url("https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Light/FiraCodeNerdFont-Light.ttf"); font-weight: normal; font-style: normal;} x-row {text-rendering: optimizeLegibility;font-variant-ligatures: normal;}')
@@ -115,6 +115,12 @@ Telescope shortcuts
 ### Spelling
 
 `z=` Spelling suggestions (under cursor)
+
+## Show column marker
+
+```
+:set colorcolumn=80
+```
 
 ## Todo
 

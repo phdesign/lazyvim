@@ -20,6 +20,7 @@ vim.keymap.set(
 
 vim.cmd("command -range=% DeleteBlanks <line1>,<line2>g/^\\s*$/d")
 vim.cmd("command -range=% DeleteDuplicateLines <line1>,<line2>sort|<line1>,<line2>g/^\\(.*\\)\\n\\1$/d")
+vim.cmd("command -range=% DeleteTrailingSpaces <line1>,<line2>s/\\s\\+$//g")
 -- vim.api.nvim_create_user_command("DeleteBlanks", "<line1>,<line2>g/^\\s*$/d", { range = "%" })
 -- vim.api.nvim_create_user_command(
 --   "DeleteDuplicateLines",

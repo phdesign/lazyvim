@@ -1,3 +1,3 @@
 return {
-  "christoomey/vim-sort-motion"
+  "christoomey/vim-sort-motion",
 }
