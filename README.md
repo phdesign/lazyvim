@@ -77,6 +77,8 @@ Set filetype
 
 `ciw<tag>` Rename HTML tag using [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
 
+`<c-y>u` Rename tag using emmet
+
 ### Search and replace
 
 `<leader>/` Grep search
