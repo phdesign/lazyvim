@@ -16,6 +16,14 @@ git clone git@github.com:phdesign/lazygit.git ~/.config/nvim
 git clone git@github.com:phdesign/lazygit.git $LOCALAPPDATA/nvim
 ```
 
+Install gcc compiler for MSYS2
+
+```
+pacman -S mingw-w64-ucrt-x86_64-gcc
+```
+
+You'll need to use the [UCRT64 environment](https://www.msys2.org/docs/environments/)
+
 ## Using python virtual environment
 
 Start Vimr from an activated terminal
