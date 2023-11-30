@@ -2,6 +2,20 @@
 
 Refer to the [documentation](https://lazyvim.github.io/installation) for more information.
 
+## Installation
+
+### Mac
+
+```
+git clone git@github.com:phdesign/lazygit.git ~/.config/nvim
+```
+
+### Windows
+
+```
+git clone git@github.com:phdesign/lazygit.git $LOCALAPPDATA/nvim
+```
+
 ## Using python virtual environment
 
 Start Vimr from an activated terminal
