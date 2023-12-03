@@ -2,6 +2,7 @@ return {
   "williamboman/mason.nvim",
   opts = {
     ensure_installed = {
+      "deno",
       "fixjson",
       "flake8",
       "goimports",
