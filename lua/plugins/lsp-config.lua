@@ -1,20 +1,18 @@
 -- Disable because this is breaking loading other LSPs
-if true then
-  return {}
-end
+-- if true then
+--   return {}
+-- end
 
 return {
   "neovim/nvim-lspconfig",
-  config = function()
-    local lspconfig = require("lspconfig")
-
-    lspconfig.denols.setup({
-      root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
-    })
-
-    lspconfig.tsserver.setup({
-      root_dir = lspconfig.util.root_pattern("package.json"),
-      single_file_support = false,
-    })
-  end,
+  opts = {
+    servers = {
+      denols = {
+        filetypes = { "typescript", "typescriptreact" },
+        root_dir = function(...)
+          return require("lspconfig.util").root_pattern("deno.jsonc", "deno.json")(...)
+        end,
+      },
+    },
+  },
 }

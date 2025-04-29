@@ -15,8 +15,6 @@ return {
       "graphql-language-service-cli",
       "isort",
       "mypy",
-      "sqlfluff",
-      "sqlfmt",
     },
   },
 }
